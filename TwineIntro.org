@@ -1,0 +1,119 @@
+#+AUTHOR: Pixel Arts Game Education
+#+TITLE: What's in a story? An introduction to Twine
+
+* Interactive storytelling
+Twine is a system from building /interactive fiction/. In Twine, you can make all sorts of stories! You can make adventure games exploring underground caverns, solving mysteries, or just exploring the choices of your characters.
+
+Interactive fiction includes everything from old text games like /Zork/, to visual novels like /Long Live The Queen/, to story-driven exploration games like /Firewatch/ or /Gone Home/, to horror stories like /The Walking Dead/ and /Until Dawn/. 
+
+  All of these are examples of interactive fiction. A really great easy-to-use way to write interactive fiction is a system called /Twine/. 
+* What is Twine?
+  Twine let's you make text-focused interactive fiction, a kind of halfway point between visual novels and the old text games from the 70s and 80s.
+
+  A Twine game might look something like 
+  file:Images/TwineScreenshot.png
+  when it's done, but when you're working on it it'll look more like
+  file:Images/DoggoScreenshot.png
+
+  Each of those squares represents a *scene* or a *location* in Twine, called /passages/ in Twine parlance, and each of the arrows represents a transition between scenes, a link.
+
+  Every Twine story, no matter how complicated and interesting it gets, is fundamentally put together out of *passages* and *links*. 
+** Why use Twine?
+    + It's easy to get use and get started
+    + You can use it online without needing to download anything
+    + You can use it to prototype games
+    + Twine lets you make games with as much or as little programming as you want!
+    + It lets you write games even if you're more comfortable writing than drawing or 3d modeling 
+* Common Tasks
+** Making passages
+To make a new passage, you can click on the button that says =+Passage= in the lower right corner of the screen.
+
+You can *also* make a new passage by making a /link/ to a passage that doesn't yet exist. Twine is smart enough that it will make passages automatically if you just write your code like they're already there!
+
+** Making links
+To make a link to a passage, you can type
+#+BEGIN_EXAMPLE
+[[text you want to appear -> Name of passage]]
+#+END_EXAMPLE
+or
+#+BEGIN_EXAMPLE
+[[text that you want to appear]]
+#+END_EXAMPLE
+
+The former will show a link with the text "text you want to appear" but link to a passage called "Name of passage", possibly creating a new passage if it doesn't already exist.
+
+The latter treats the text that appears *as* the name of the passage and, again, creating a new passage if it doesn't already exist. 
+** Including images           
+Twine may be text heavy, but that doesn't mean that it's text *only*! You can include images, audio, or even video!
+
+The secret is that every Twine story is actually a webpage at the end of the day. This means that you can include HTML in your Twine story to include other media. If you put
+#+BEGIN_EXAMPLE
+<img src="url of image">
+#+END_EXAMPLE
+
+in a passage it will load the image whenever the passage loads!
+* Saving Your Story
+ By default, Twine stores the game in the local /browser/ so it'll only be on the local computer. To save your game you need to
+
+  + Click on the title of the story in the lower left hand corner
+  + Select the option that says \verb"Publish to File"
+  + Save the HTML file somewhere safe or email it to yourself
+* Glossary of Terms
+    + Twine :: A program for making interactive fiction
+    + Interactive fiction :: Video games that are primarily about storytelling and whose game mechanics involves choosing where the story goes. 
+    + Passage :: An individual scene or location in your Twine story.
+    + Link :: The connections between passages. Made like =[[link text->Passage Name]]=
+    + Story format :: The story format of a Twine game is what controls how you program your Twine game. There are three story formats: *Harlowe*, *Snowman*, and *Sugarcube*.
+    + Harlowe :: The default story format of Twine. We'll be using Harlowe exclusively in all our materials.
+    + Macro :: Macros are the commands in Harlowe for programming your game. Like =(set: ...)=, =(if: ..)=, or =(colour: ...)= 
+    + Variable :: A place to store data. Usually start with a =$=
+    + Hook :: Text that's within square brackets, like in =(colour: red)[This text will be red]=
+
+* Common Macros
+** set
+The =set= macro is used to give values to variables. The variables can be used later just by typing their name.
+
+#+BEGIN_EXAMPLE
+(set: $numberOfChickens to 3)
+#+END_EXAMPLE
+
+makes the name =$numberOfChickens= mean 3 when the game runs.
+
+** colour
+The =colour= macro changes the color of the text it's applied to.
+#+BEGIN_EXAMPLE
+(colour: blue)[This text will appear as blue]
+(colour: yellow)[this will appear as yellow]
+#+END_EXAMPLE
+
+** if
+This macro lets you make choices depending on the value of a variable. Can be combined with =else= as well.
+#+BEGIN_EXAMPLE
+(if: $beenHere is 0)[You look around in awe]
+(else:)[Oh geez, you're back here again.]
+#+END_EXAMPLE
+
+This will display one thing if =$beenHere= is equal to 0 and different text otherwise
+** background
+This macro lets you add background color and images to your story.
+#+BEGIN_EXAMPLE
+(background: (rgb: 255,0,255))[Beep boop]
+#+END_EXAMPLE
+This will make the text have a light purple background behind it. 
+** click
+This macro allows you to make things happen when the user clicks on a link.
+#+BEGIN_EXAMPLE
+The window is fogged over, 
+but you can almost make out a shape. 
+(click: "shape")[It's growing closer!!!!] 
+#+END_EXAMPLE
+
+This means that the word "click" will look like a link and if you click it, the text "it's growing closer!!!!" will appear. 
+
+* Useful links
+    + Twine website https://twinery.org
+    + Harlowe documentation https://twine2.neocities.org/
+    + Twine tutorials https://bit.ly/PAGETwineDemo
+    + Free Twine hosting https://philome.la
+    + Pixel Arts' Philomela page http://philome.la/PixelArtsPublic
+    + The Mythos Challenge http://www.mythoschallenge.com/

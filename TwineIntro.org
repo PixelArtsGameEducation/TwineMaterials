@@ -11,9 +11,9 @@ Interactive fiction includes everything from old text games like /Zork/, to visu
   Twine let's you make text-focused interactive fiction, a kind of halfway point between visual novels and the old text games from the 70s and 80s.
 
   A Twine game might look something like 
-  file:Images/TwineScreenshot.png
+  [[Images/TwineScreenshot.png]]
   when it's done, but when you're working on it it'll look more like
-  file:Images/DoggoScreenshot.png
+  [[Images/DoggoScreenshot.png]]
 
   Each of those squares represents a *scene* or a *location* in Twine, called /passages/ in Twine parlance, and each of the arrows represents a transition between scenes, a link.
 

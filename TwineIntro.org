@@ -7,6 +7,8 @@ Twine is a system from building /interactive fiction/. In Twine, you can make al
 Interactive fiction includes everything from old text games like /Zork/, to visual novels like /Long Live The Queen/, to story-driven exploration games like /Firewatch/ or /Gone Home/, to horror stories like /The Walking Dead/ and /Until Dawn/. 
 
   All of these are examples of interactive fiction. A really great easy-to-use way to write interactive fiction is a system called /Twine/. 
+
+  An example story is [[https://pixelartsgameeducation.github.io/Girls-Inc-Twine/Mt%20Hood%20CC/Pixel%20Arts%20Game%20Education%20-%20Corinne%20and%20Her%20Dog%20vs.%20Aliens.html][here]]
 * What is Twine?
   Twine let's you make text-focused interactive fiction, a kind of halfway point between visual novels and the old text games from the 70s and 80s.
 

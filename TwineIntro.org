@@ -117,3 +117,4 @@ This means that the word "click" will look like a link and if you click it, the 
     + Free Twine hosting https://philome.la
     + Pixel Arts' Philomela page http://philome.la/PixelArtsPublic
     + The Mythos Challenge http://www.mythoschallenge.com/
+    + Pixel Arts Game Education https://www.gameeducationpdx.com/
